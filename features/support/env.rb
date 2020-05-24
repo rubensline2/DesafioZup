@@ -10,7 +10,7 @@ Capybara.default_max_wait_time = 30
 World(Helper)
 
 ## register driver according with browser chosen
-Capybara.register_driver :selenium do |config|
+Capybara.register_driver :headless_chrome do |config|
   if BROWSER.eql?('chrome')
     Capybara::Selenium::Driver.new(config,
     :browser => :chrome,
