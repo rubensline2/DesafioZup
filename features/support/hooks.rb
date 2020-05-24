@@ -7,7 +7,7 @@ World(Helper)
 Before do |feature|
   ## configure the chosen browser
   Capybara.configure do |config|
-    config.default_driver = :selenium_chrome
+    config.default_driver = :selenium_chrome_headless
     config.app_host = CONFIG['url_padrao']
   end
 
