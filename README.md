@@ -31,9 +31,9 @@ chrome_headless: BROWSER=chrome_headless
 
 ## Para rodar os testes via terminal:
 ````
-╰─➤Acessar a 'pasta qa-maxmilhas' via terminal
-╰─➤executar o comando: bundle install
-╰─➤No teminal executar o comando: cucumber
+╰─➤Acessar a pasta via terminal 'DesafioZup'
+╰─➤executar o comando no terminal: bundle install
+╰─➤Executar o comando: cucumber
 
 ````
 ## Automação end-to-end com Docker
