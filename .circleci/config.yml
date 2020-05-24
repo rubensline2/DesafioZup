@@ -58,8 +58,12 @@ jobs:
           keys:
             - google-bundle-{{ .Branch }}
       - run: 
-          name: Bundle install
-          command: bundle install --path vendor/bundle
+          command: |
+             echo 'export BUNDLER_VERSION=$(cat Gemfile.lock | tail -1 | tr -d " ")' >> $BASH_ENV
+             source $BASH_ENV
+             gem update --system
+             gem install bundler
+             bundle check || bundle install --path vendor/bundle
       - run:
           name: Rubocop analyzer
           command: bundle exec rubocop
