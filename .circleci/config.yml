@@ -29,7 +29,7 @@ jobs: # a collection of steps
           source $BASH_ENV
           gem install bundler
           bundler -v
-          bundle check || bundle install
+          bundle check || bundle install --path vendor/bundle
 
       # Store bundle cache
       - save_cache:
