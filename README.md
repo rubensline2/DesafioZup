@@ -59,7 +59,7 @@ Rodar no DOCKER:
 2. Execute o test diretamente pelo Docker após buildar imagem
 
 ````ruby
-╰─➤  docker run --rm < nome de sua imagem > bundle exec cucumber features/specifications/comprar_passagem.feature
+╰─➤  docker run --rm < nome de sua imagem > bundle exec cucumber
 ````
 
 ```
