@@ -6,7 +6,7 @@ jobs:
   checkout_code:
     docker:
       - image: circleci/ruby:2.4-node
-    working_directory: ~/google-test-example
+    working_directory: ~/temp
     
     # Neste step estamos fazendo o primeiro passo, que é o checkout, como o git clone que executamos anteriormente. 
     # Aqui também salvamos em cache o repositório para agilizar os próximos passos.
@@ -64,9 +64,9 @@ jobs:
             command: |
             bundle exec cucumber --format pretty --format html --out=tmp/test-results/features_report.html
       - store_test_results:
-          path: ~/tmp/test-results/
+          path: ~/temp/test-results/
       - store_artifacts:
-          path: ~/tmp/test-results/
+          path: ~/temp/test-results/
 
 # Aqui começa a mágia, que nada mais é que a configuramos do workflow
 workflows:
