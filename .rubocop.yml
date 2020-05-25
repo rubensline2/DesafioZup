@@ -24,3 +24,5 @@ Style/ClassAndModuleChildren:
 Style/FrozenStringLiteralComment:
   Enabled: false
   
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
