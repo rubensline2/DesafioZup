@@ -32,15 +32,15 @@ jobs:
             - google-bundle-{{ .Branch }}
       - run: 
           name: Bundle install
-          command: bundle install --path vendor/bundle
+          command: bundle install --path --path vendor/bundle
       - save_cache:
           key: google-bundle-{{ .Branch }}-{{ epoch }}
           paths:
-            - ~/google-test-example/vendor/bundle
+            -vendor/bundle
       - save_cache:
           key: google-bundle-{{ .Branch }}
           paths: 
-            - ~/google-test-example/vendor/bundle
+            - vendor/bundle
   
   # Aqui está nosso primeiro teste, a análise estática do código. 
   # Como fizemos manualmente, nós baixamos as dependências e executamos o comando rubocop
@@ -57,7 +57,7 @@ jobs:
             - google-bundle-{{ .Branch }}
       - run: 
           name: Bundle install
-          command: bundle install vendor/bundle
+          command: bundle install --path vendor/bundle
       - run:
           name: Rubocop analyzer
           command: bundle exec rubocop
