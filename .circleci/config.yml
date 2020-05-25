@@ -15,12 +15,12 @@ jobs:
       - save_cache:
           key: google-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
-            - ~/google-test-example
+            - ~/temp
 
   # Neste step vamos baixar as dependências do nosso problema, no caso, as gem's. 
   # Como no passo checkout_code, salvamos as dependências em cache, sempre pensando na otimização dos passos seguintes.
   bundle_dependencies:
-    working_directory: ~/google-test-example  
+    working_directory: ~/temp
     docker:
       - image: circleci/ruby:2.4-node
     steps:
@@ -36,15 +36,15 @@ jobs:
       - save_cache:
           key: google-bundle-{{ .Branch }}-{{ epoch }}
           paths:
-            - ~/google-test-example/vendor/bundle
+            - ~/temp/vendor/bundle
       - save_cache:
           key: google-bundle-{{ .Branch }}
           paths: 
-            - ~/google-test-example/vendor/bundle
+            - ~/temp/vendor/bundle
   
   
   chrome_test:
-    working_directory: ~/google-test-example
+    working_directory: ~/temp
     docker:
       - image: circleci/ruby:latest-browsers
     steps:
