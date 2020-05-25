@@ -60,7 +60,7 @@ jobs:
           command: bundle install --path vendor/bundle
       - run:
           name: Rubocop analyzer
-          command: bundle exec rubocop
+          #command: bundle exec rubocop
 
   # Aqui está nosso segundo teste, os testes de interface.
   # Como fizemos manualmente, nós baixamos as dependências e executamos o comando cucumber
