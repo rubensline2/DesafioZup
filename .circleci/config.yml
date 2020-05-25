@@ -83,11 +83,11 @@ jobs:
           name: Execute all features scenarios
           command: |
             mkdir /google-test-example
-            bundle exec cucumber --format junit --out /tmp/test-results/junit.xml
+            cucumber --format html --out ~/google-test-example/test-results/reports.html
       - store_test_results:
-          path: /~/google-test-example/test-results/
+          path: ~/google-test-example/test-results/
       - store_artifacts:
-          path: /~/google-test-example/test-results/
+          path: ~/google-test-example/test-results/
 
 # Aqui começa a mágia, que nada mais é que a configuramos do workflow
 workflows:
