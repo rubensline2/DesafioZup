@@ -3,6 +3,10 @@ CI | Status
 CircleCI | ![CircleCI](https://circleci.com/gh/rubensline2/DesafioZup.svg?style=svg)
 (https://circleci.com/gh/rubensline2/DesafioZup)
 
+CI | Status
+---| ------
+CircleCI | [![CircleCI](https://circleci.com/gh/rbercam/testing_dojo_uai_api.svg?style=svg)](https://circleci.com/gh/rbercam/testing_dojo_uai_api)
+
 
 
 ## Automação end-to-end com Docker
