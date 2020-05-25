@@ -60,7 +60,7 @@ jobs:
       - run: 
           name: Execute all features scenarios (except @wip tags) on Goole Chrome browser
           command: |
-            mkdir /tmp/test-results
+            #mkdir /test-results
             command: |
             bundle exec cucumber --format pretty --format html --out=tmp/test-results/features_report.html
       - store_test_results:
