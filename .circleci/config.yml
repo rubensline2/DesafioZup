@@ -44,23 +44,23 @@ jobs:
   
   # Aqui está nosso primeiro teste, a análise estática do código. 
   # Como fizemos manualmente, nós baixamos as dependências e executamos o comando rubocop
-  code_analyzer:
-    working_directory: ~/google-test-example  
-    docker:
-      - image: circleci/ruby:2.4-node
-    steps:
-      - restore_cache:
-          keys:
-            - google-repo-{{ .Environment.CIRCLE_SHA1 }}
-      - restore_cache:
-          keys:
-            - google-bundle-{{ .Branch }}
-      - run: 
-          name: Bundle install
-          command: bundle install --path vendor/bundle
-      - run:
-          name: Rubocop analyzer
-          #command: bundle exec rubocop
+ #   code_analyzer:
+ #     working_directory: ~/google-test-example  
+ #     docker:
+ #       - image: circleci/ruby:2.4-node
+ #     steps:
+ #       - restore_cache:
+ #           keys:
+ #             - google-repo-{{ .Environment.CIRCLE_SHA1 }}
+ #       - restore_cache:
+ #           keys:
+ #             - google-bundle-{{ .Branch }}
+ #       - run: 
+ #           name: Bundle install
+ #           command: bundle install --path vendor/bundle
+ #       - run:
+ #           name: Rubocop analyzer
+ #           command: bundle exec rubocop
 
   # Aqui está nosso segundo teste, os testes de interface.
   # Como fizemos manualmente, nós baixamos as dependências e executamos o comando cucumber
