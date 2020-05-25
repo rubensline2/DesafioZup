@@ -15,7 +15,7 @@ jobs:
       - save_cache:
           key: google-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
-            - ~/temp
+            - vendor/bundle
 
   # Neste step vamos baixar as dependências do nosso problema, no caso, as gem's. 
   # Como no passo checkout_code, salvamos as dependências em cache, sempre pensando na otimização dos passos seguintes.
