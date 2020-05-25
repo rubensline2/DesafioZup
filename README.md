@@ -1,6 +1,6 @@
 CI | Status
 ---| ------
-CircleCI | [![CircleCI](https://circleci.com/gh/rubensline2/DesafioZup.svg?style=svg)]
+CircleCI | ![CircleCI](https://circleci.com/gh/rubensline2/DesafioZup.svg?style=svg)
 (https://circleci.com/gh/rubensline2/DesafioZup)
 
 
