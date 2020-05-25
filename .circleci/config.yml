@@ -64,9 +64,9 @@ jobs:
             command: |
             bundle exec cucumber --format pretty --format html --out=tmp/test-results/features_report.html
       - store_test_results:
-          path: /tmp/test-results/
+          path: ~/tmp/test-results/
       - store_artifacts:
-          path: /tmp/test-results/
+          path: ~/tmp/test-results/
 
 # Aqui começa a mágia, que nada mais é que a configuramos do workflow
 workflows:
