@@ -58,7 +58,7 @@ jobs:
           name: Bundle install
           command: bundle install --path vendor/bundle
       - run: 
-          name: Execute all features scenarios (except @wip tags) on Goole Chrome browser
+          name: Execute all features scenarios
           command: |
             #mkdir /test-results
             command: |
