@@ -1,3 +1,8 @@
+CI | Status
+---| ------
+[![CircleCI](https://circleci.com/gh/rubensline2/DesafioZup.svg?style=svg)]
+(https://circleci.com/gh/rubensline2/DesafioZup)
+
 ## Automação end-to-end com Docker
 
 ``
