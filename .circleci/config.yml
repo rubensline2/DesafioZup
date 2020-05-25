@@ -82,7 +82,7 @@ jobs:
       - run: 
           name: Execute all features scenarios
           command: |
-            mkdir /google-test-example
+            mkdir ~/google-test-example
             cucumber --format html --out ~/google-test-example/test-results/reports.html
       - store_test_results:
           path: ~/google-test-example/test-results/
