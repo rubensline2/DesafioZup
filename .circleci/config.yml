@@ -6,13 +6,6 @@ jobs:
   checkout_code:
     docker:
       - image: circleci/ruby:2.4-node
-      environment: # environment variables for primary container
-          BUNDLE_JOBS: 3
-          BUNDLE_RETRY: 3
-          BUNDLE_PATH: vendor/bundle
-          PGHOST: 127.0.0.1
-          PGUSER: circleci-demo-ruby
-          RAILS_ENV: test
     working_directory: ~/google-test-example
     
     # Neste step estamos fazendo o primeiro passo, que é o checkout, como o git clone que executamos anteriormente. 
